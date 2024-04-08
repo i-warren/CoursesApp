@@ -59,6 +59,10 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+/**
+ * Composable that creates a grid containing each course and its information
+ * @param modifier modifiers to set to this composable
+ */
 @Composable
 fun TopicGrid(modifier: Modifier = Modifier) {
     LazyVerticalGrid(
@@ -73,6 +77,12 @@ fun TopicGrid(modifier: Modifier = Modifier) {
     }
 }
 
+/**
+ * Composable that creates a card to display information for each topic
+ *
+ * @param topic contains the data that populates the list item
+ * @param modifier modifiers to set to this composable
+ */
 @Composable
 fun TopicCard(topic: Topic, modifier: Modifier = Modifier) {
     Card(modifier = modifier) {
@@ -117,6 +127,9 @@ fun TopicCard(topic: Topic, modifier: Modifier = Modifier) {
     }
 }
 
+/**
+ * Composable that displays what the UI of the app looks like in light theme in the design tab.
+ */
 @Preview(showBackground = true)
 @Composable
 fun TopicPreview() {
